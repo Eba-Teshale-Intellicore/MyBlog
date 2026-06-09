@@ -5,7 +5,7 @@
   method="POST"
   style="width: 500px; margin: auto"
 >
-  {% csrf_token %} {{ form | crispy}}
+  {% csrf_token %} {{ form | crispy}} <br />
   <button type="submit" class="btn btn-warning">Submit</button>
 </form>
 {% endblock content %}

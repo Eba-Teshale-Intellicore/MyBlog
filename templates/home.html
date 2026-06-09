@@ -154,13 +154,16 @@
           {% endfor %}
         </div>
         <div class="p-4">
-          {% for social_link in social_links %} {% if forloop.first %}
           <h4 class="fst-italic">Elsewhere</h4>
+          {% for social_link in social_links %}
           <ol class="list-unstyled">
-            <li><a href="{{ social_link.link }}" target="_blank">{{ social_link.platform }}</a></li>
+            <li>
+              <a href="{{ social_link.link }}" target="_blank"
+                >{{ social_link.platform }}</a
+              >
+            </li>
           </ol>
-          {% endif %} {% endfor %}
-          </ol>
+          {% endfor %}
         </div>
       </div>
     </div>

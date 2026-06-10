@@ -3,9 +3,9 @@ from blogs.models  import Category, Blog
 from assig.models import About, SocialLinks
 from .forms import SignupForm, LoginForm
 from django.contrib import auth
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required #login Requires
 
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def home(request):
   categories = Category.objects.all()
   blogs = Blog.objects.all()

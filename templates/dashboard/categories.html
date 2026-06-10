@@ -23,21 +23,23 @@
         </tr>
       </thead>
       <tbody>
+        {% for car in categories%}
         <tr>
-          <td>1</td>
-          <td>Tourism</td>
-          <td>may 2</td>
-          <td>may 3</td>
+          <td>{{ forloop.counter}}</td>
+          <td>{{ car }}</td>
+          <td>{{ car.created_at }}</td>
+          <td>{{ car.updated_at }}</td>
           <td>
-            <a href="{% url 'editCategories' 1 %}"
+            <a href="{% url 'editCategories' car.id %}"
               ><i class="fa fa-edit text-success"></i
             ></a>
             &emsp;
-            <a href="{% url 'deleteCategories' 9 %}"
+            <a href="{% url 'deleteCategories' car.id %}"
               ><i class="fa fa-trash text-danger"></i
             ></a>
           </td>
         </tr>
+        {% endfor %}
       </tbody>
     </table>
   </div>
